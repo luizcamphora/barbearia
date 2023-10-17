@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="navegacao">
-        <nav class="navbar bg-body-tertiary" id="navegacao-logo">
+        <nav id="navegacao-logo">
           <p id="texto-logo">Barbearia Profissional</p>
           <div class="container" id="logo">
             <a class="navbar-brand" href="#" id="logo-txt">Barbearia da Vila </a>
@@ -13,7 +13,7 @@ function App() {
           </div>
           <p id="texto-logo-desde">desde 1996</p>
         </nav>
-        <nav class="navbar bg-body-tertiary" >
+        <nav id="link-nav">
           <div class="container-fluid" id="navegacao-link">
             <a class="navbar-brand" href="#" id="link-lista">Página Incial</a>
             <a class="navbar-brand" href="#" id="link-lista">Produtos</a>
@@ -24,7 +24,11 @@ function App() {
       </div>
       <div id="principal">
         <div id="banner">
+          <img src="/img/banner.jpg" id="imagem-banner"></img>
         </div>
+          <div id="produtos">
+            <p id="produtos-titulo">Produtos</p>
+          </div>
       </div>
     </div>
   );

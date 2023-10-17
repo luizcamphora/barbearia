@@ -1,6 +1,14 @@
 @font-face {
-  font-family: 'barber';
-  src: url('/projeto-barbearia/public/fonts/BarberShop-EXZj.ttf');
+  font-family:'barber';
+  src: url('/public/fonts/RichTheBarberPersonalUse-gx824.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Queen';
+  src: url('/public/fonts/Queensides-3z7Ey.ttf');
+}
+@font-face {
+  font-family:'CaptainBarber' ;
+  src: url('/public/fonts/CaptainBarberPersonalUse-owxxq.ttf');
 }
 
 #navegacao-logo{
@@ -14,12 +22,15 @@
 #texto-logo{
   margin: 0 auto;
   color: #242424;
+  font-family: 'Queen';
+  font-size: 24px;
 }
 
 #texto-logo-desde{
   margin: 0 auto;
   font-family: 'Dancing Script', cursive;
   color: #242424;
+  margin-bottom: 8px;
 }
 #logo {
   display: flex;
@@ -34,9 +45,8 @@
   height: 48px;
 }
 #logo-txt {
-  font-family: 'barber';
+  font-family:'barber', Times, serif;
   font-size: 40px;
-  text-decoration: none;
   color: #242424;
 }
 
@@ -53,6 +63,35 @@
 #link-lista{
   color: #ffffff;
   font-size: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+#link-lista:hover{
+  color: #B88355;
+  transition: 0.3s;
+}
+
+#banner{
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  opacity: 1; 
+  transition: opacity 0.3s;  
+}
+#banner:hover{
+  cursor: pointer;
+}
+#imagem-banner{
+  width: 100%;
+  height: auto;
+}
+#produtos-titulo{
+  font-family:'CaptainBarber';
+  font-size: 40px;
+  color: #242424;
+}
+#principal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

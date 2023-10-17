@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'barber';
+  src: url('/projeto-barbearia/public/fonts/BarberShop-EXZj.ttf');
+}
+
 #navegacao-logo{
   display: flex;
   flex-direction: column;
@@ -8,12 +13,20 @@
 }
 #texto-logo{
   margin: 0 auto;
+  color: #242424;
+}
+
+#texto-logo-desde{
+  margin: 0 auto;
+  font-family: 'Dancing Script', cursive;
+  color: #242424;
 }
 #logo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 10vh;
 }
 
 #logo-img {
@@ -21,8 +34,10 @@
   height: 48px;
 }
 #logo-txt {
-  font-family: 'Bungee Inline', sans-serif;
-  font-size: 32px;
+  font-family: 'barber';
+  font-size: 40px;
+  text-decoration: none;
+  color: #242424;
 }
 
 #navegacao-link {

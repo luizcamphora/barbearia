@@ -1,14 +1,15 @@
 @font-face {
   font-family:'barber';
-  src: url('/public/fonts/RichTheBarberPersonalUse-gx824.ttf') format('truetype');
+  src: url('/public/fonts/TEXAT BOLD PERSONAL USE___.otf') format('truetype');
 }
 @font-face {
   font-family: 'Queen';
   src: url('/public/fonts/Queensides-3z7Ey.ttf');
 }
+
 @font-face {
-  font-family:'CaptainBarber' ;
-  src: url('/public/fonts/CaptainBarberPersonalUse-owxxq.ttf');
+  font-family:'bold';
+  src: url('/public/fonts/THE BOLD FONT - FREE VERSION - 2023.ttf');
 }
 
 #navegacao-logo{
@@ -41,12 +42,13 @@
 }
 
 #logo-img {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
+  margin-left: 16px;
 }
 #logo-txt {
   font-family:'barber', Times, serif;
-  font-size: 40px;
+  font-size: 48px;
   color: #242424;
 }
 
@@ -89,7 +91,7 @@
   top:-60%;
 }
 #produtos-titulo{
-  font-family:'CaptainBarber';
+  font-family:'barber';
   font-size: 40px;
   color: #242424;
 }
@@ -116,8 +118,12 @@
 
 #cards{
   width: 300px;
-  height: 400px;
-  border: #242424 solid 1px;
+  height: 420px;
+  border: #cec3c3 solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 #cards-img{
   width: 100%;
@@ -129,4 +135,31 @@
   width: 100%;
   height: auto;
   position: absolute;
+  
+}
+#titulo-card{
+  font-family: 'Queen';
+  font-size: 16px;
+  margin: 0 auto;
+}
+#valor-card{
+  font-family: 'Queen';
+  font-size:24px;
+  margin: 0 auto;
+}
+#botao{
+  background-color: #F7C137;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+#botao-card{
+  background-color: #F7C137;
+  width: 190px;
+  height: 30px;
+  border: #242424 solid 1px;
+  color: #242424;
 }

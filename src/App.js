@@ -32,10 +32,10 @@ function App() {
           {/*Links*/}
 
           <div className="navegacao-link">
-           <Link to="/" className="link-lista">Página Inicial</Link>
-            <Link to="/servicos" className="link-lista">Serviços</Link>
+            <Link to="/" className="link-lista">Página Inicial</Link>
+            <Link to="/" className="link-lista">Serviços</Link>
             <Link to="/agenda" className="link-lista">Agenda</Link>
-            <Link to="/quemsomos" className="link-lista">Quem Somos</Link>
+            <Link to="/" className="link-lista">Quem Somos</Link>
           </div>
 
           {/*Login*/}

@@ -188,13 +188,100 @@ border: #b4b4b4 1px solid;
   opacity: 0.7;
 }
 
-.agenda{
-  width: 100%;
-  height: 100vh;
-}
-
 .rodape{
   width: 100%;
   height: 1000px;
   background-color: aqua;
+}
+.Agenda{
+  width: 100%;
+  height: 100vh;
+}
+.agenda-conteudo{
+  width: 100%;
+  height: 74vh;
+}
+.agenda-imagem{
+  width: 100%;
+  height: 74vh;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+.agenda-imagem-fundo{
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 27vh;
+  left: 5vw;
+  width: 90vw;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo e transparência */
+  color: #fff; /* Cor do texto dentro da div de sobreposição */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agenda-servico{
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+.agenda-data{
+  width: 300px;
+  height: 400px;
+  background-color: #b4b4b4;
+}
+.agenda-horario{
+  width: 300px;
+  height: 400px;
+  background-color: #b4b4b4;
+}
+.agenda-detalhes{
+  width: 300px;
+  height: 400px;
+  background-color: #b4b4b4;
+}
+.agenda-servico-img{
+  width: 100px;
+}
+.corte{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.barba{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.corte-barba{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.agenda-swtich{
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.label-servico{
+  margin-right: 40px;
+}
+.agenda-servico-aparar{
+  margin-left: 40px;
+}
+.agenda-servico-titulo{
+  font-family: 'Queen';
+  text-align: center;
+  color: #EFB43A;
+  font-size: 24px;
 }

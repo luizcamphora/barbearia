@@ -236,17 +236,14 @@ border: #b4b4b4 1px solid;
 .agenda-data{
   width: 300px;
   height: 400px;
-  background-color: #b4b4b4;
 }
 .agenda-horario{
   width: 300px;
   height: 400px;
-  background-color: #b4b4b4;
 }
 .agenda-detalhes{
   width: 300px;
   height: 400px;
-  background-color: #b4b4b4;
 }
 .agenda-servico-img{
   width: 100px;
@@ -284,4 +281,7 @@ border: #b4b4b4 1px solid;
   text-align: center;
   color: #EFB43A;
   font-size: 24px;
+}
+.calendario-customizacao{
+  background-color: rgba(0, 0, 0, 0.9);
 }

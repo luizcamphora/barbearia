@@ -2,6 +2,7 @@
   font-family: 'barbearia';
   src: url(/public/fonts/CaptainBarberPersonalUse-owxxq.ttf);
 }
+
 @font-face {
   font-family: 'Queen';
   src: url(/public/fonts/Queensides-3z7Ey.ttf);
@@ -11,16 +12,17 @@
 .navegacao {
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0.9;
   color: #fff;
   width: 100%;
   height: 10vh;
   display: flex;
   z-index: 1;
-  
+
 }
-.nav{
+
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,11 +30,13 @@
   height: 10vh;
   background-color: #242424;
 }
-.nav-fake{
+
+.nav-fake {
   width: 240px;
   height: auto;
 }
-.navegacao-link{
+
+.navegacao-link {
   width: 100%;
   height: 10vh;
   display: flex;
@@ -40,19 +44,26 @@
   justify-content: center;
   background-color: #242424;
 }
-.link-lista{
+
+.link-lista {
   padding-left: 32px;
   padding-right: 32px;
   color: #fff;
   text-decoration: none;
   font-family: 'Queen';
 }
-.link-lista:hover{
+
+.link-lista:hover {
   color: #EFB43A;
   transition: 0.5s;
 }
 
-.login{
+.link-lista.active {
+  color: #EFB43A; /* Cor para o link ativo */
+  /* Outros estilos desejados para o link ativo */
+}
+
+.login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,112 +71,178 @@
   width: 240px;
   height: auto;
 }
-.login:hover{
+
+.login:hover {
   color: #EFB43A;
   transition: 0.5s;
 }
 
-.login-link{
+.login-link {
   color: #fff;
   text-decoration: none;
   font-family: 'Queen';
   padding-left: 8px;
   padding-right: 8px;
 }
-.login-link:hover{
+
+.login-link:hover {
   color: #EFB43A;
   transition: 0.5s;
 }
 
-.logotipo{
+.logotipo {
   width: 100%;
   height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
 
-.logotipo-banner{
-  display:flex;
+.logotipo-banner {
+  display: flex;
   align-items: center;
 }
 
-.logotipo-banner-texto{
+.logotipo-banner-texto {
   font-family: 'barbearia';
   font-size: 80px;
   margin: 0 auto;
   padding-right: 8px;
 }
-.logotipo-banner-imagem{
+
+.logotipo-banner-imagem {
   width: 400px;
   height: auto;
 }
-.banner{
+
+.banner {
   position: relative;
   width: 100%;
   height: 65vh;
   overflow: hidden;
- 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
-.imagem-banner{
+
+.imagem-banner {
   width: 100%;
   height: auto;
   position: absolute;
   top: -60%;
-  
+
 }
 
-.servico-titulo{
+.texto-banner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+/*   top: 25vh;
+  left: 25vw; */
+}
+
+.texto-banner-primeiro {
+  font-family: 'Queen';
+  color: #fff;
+  font-size: 40px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.texto-banner-segundo {
+  font-family: 'Queen';
+  color: #fff;
+  font-size: 80px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.banner-botao-container{
+  width: 250px;
+  height: 82px;
+  background-color: #EFB43A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.banner-botao{
+  width: 240px;
+  height: 72px;
+  background-color: #EFB43A;
+  border: #242424 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Queen';
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.banner-botao:hover{
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.servico-titulo {
   font-family: 'barbearia';
   font-size: 32PX;
   text-align: center;
 }
-.servicos{
+
+.servicos {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 120px;
-  margin-right: 120px;
+
 }
 
-.servico-cards{
-width: 300px;
-height: 420px;
-display: flex;
-flex-direction: column;
-align-items: center;
-border: #b4b4b4 1px solid;
+.servico-cards {
+  width: 300px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #b4b4b4 1px solid;
 }
-.servico-cards-imagem{
+
+.servico-cards-imagem {
   width: 300px;
   height: 300px;
   overflow: hidden;
   transition: opacity 0.3s;
 }
 
-.servico-cards-imagem:hover{
+.servico-cards-imagem:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
-.servico-cards-imagem__aparar{
+.servico-cards-imagem__aparar {
   width: 300px;
   height: auto;
 }
-.titulo-card{
+
+.titulo-card {
   font-family: 'Queen';
   margin: 0 auto;
   font-size: 24px;
   padding-top: 8px;
 }
-.valor-card{
+
+.valor-card {
   font-family: 'Queen';
   margin: 0 auto;
   font-size: 24px;
   padding-top: 8px;
 }
-.botao{
+
+.botao {
   width: 130px;
   height: 40px;
   background-color: #EFB43A;
@@ -176,112 +253,148 @@ border: #b4b4b4 1px solid;
   margin-bottom: 16px;
 }
 
-.botao-card{
+.botao-card {
   width: 120px;
   height: 30px;
   background-color: #EFB43A;
   border: #242424 1px solid;
-  transition: opacity 0.3s;
-}
-.botao-card:hover{
-  cursor: pointer;
-  opacity: 0.7;
 }
 
-.rodape{
-  width: 100%;
-  height: 1000px;
-  background-color: aqua;
+.botao-card:hover {
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s;
 }
-.Agenda{
+
+.rodape {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rodape-icones {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 80px;
+}
+
+.rodape-copyright {
+  font-family: 'Queen';
+  margin-right: 80px;
+  font-weight: bold;
+}
+
+.Agenda {
   width: 100%;
   height: 100vh;
 }
-.agenda-conteudo{
+
+.agenda-conteudo {
   width: 100%;
   height: 74vh;
 }
-.agenda-imagem{
+
+.agenda-imagem {
   width: 100%;
   height: 74vh;
   overflow: hidden;
   position: relative;
   display: inline-block;
 }
-.agenda-imagem-fundo{
+
+.agenda-imagem-fundo {
   width: 100%;
   height: auto;
 }
+
 .overlay {
   position: absolute;
   top: 27vh;
   left: 5vw;
   width: 90vw;
   height: 70vh;
-  background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo e transparência */
-  color: #fff; /* Cor do texto dentro da div de sobreposição */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Cor de fundo e transparência */
+  color: #fff;
+  /* Cor do texto dentro da div de sobreposição */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.agenda-servico{
+.agenda-servico {
   width: 300px;
   height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- 
+
 }
-.agenda-data{
+
+.agenda-data {
   width: 300px;
   height: 400px;
 }
-.agenda-horario{
+
+.agenda-horario {
   width: 300px;
   height: 400px;
 }
-.agenda-detalhes{
+
+.agenda-detalhes {
   width: 300px;
   height: 400px;
 }
-.agenda-servico-img{
+
+.agenda-servico-img {
   width: 100px;
 }
-.corte{
+
+.corte {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.barba{
+
+.barba {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.corte-barba{
+
+.corte-barba {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.agenda-swtich{
+
+.agenda-swtich {
   width: 300px;
   height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.label-servico{
+
+.label-servico {
   margin-right: 40px;
 }
-.agenda-servico-aparar{
+
+.agenda-servico-aparar {
   margin-left: 40px;
 }
-.agenda-servico-titulo{
+
+.agenda-servico-titulo {
   font-family: 'Queen';
   text-align: center;
   color: #EFB43A;
   font-size: 24px;
 }
-.calendario-customizacao{
+
+.calendario-customizacao {
   background-color: rgba(0, 0, 0, 0.9);
 }

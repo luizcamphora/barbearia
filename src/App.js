@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 function App() {
@@ -32,16 +33,16 @@ function App() {
           {/*Links*/}
 
           <div className="navegacao-link">
-            <Link to="/" className="link-lista">Página Inicial</Link>
-            <Link to="/" className="link-lista">Serviços</Link>
-            <Link to="/agenda" className="link-lista">Agenda</Link>
-            <Link to="/" className="link-lista">Quem Somos</Link>
+            <NavLink to="/" className="link-lista" activeClassName="link-ativo">Página Inicial</NavLink>
+            <NavLink to="/servicos" className="link-lista" activeClassName="link-ativo">Serviços</NavLink>
+            <NavLink to="/agenda" className="link-lista" activeClassName="link-ativo">Agenda</NavLink>
+            <NavLink to="/quem-somos" className="link-lista" activeClassName="link-ativo">Quem Somos</NavLink>
           </div>
+
 
           {/*Login*/}
 
           <div className='login'>
-            <a class="navbar-brand" href="#" className="login-link">Login</a>
             <i class="fa-solid fa-right-to-bracket" ></i>
           </div>
         </div>
@@ -52,61 +53,32 @@ function App() {
         {/*BANNER*/}
 
         <div className='banner'>
-          <img src="/img/barnner-first.jpg" className="imagem-banner"></img>
-        </div>
+          <img src="/img/img-agenda-fundo.jpg" className="imagem-banner"></img>
+          <div className='texto-banner'>
+            <p className='texto-banner-primeiro'>Fazemos sua barba da maneira clássica:</p>
+            <p className='texto-banner-segundo'>com navalha e toalha quente</p>
+            <div className='banner-botao-container'>
+              <Link to="/servicos" className="link-lista">
+                <button className='banner-botao'>SERVIÇOS</button>
+              </Link>
 
-        {/*Título Serviços*/}
-
-        <p className='servico-titulo'>Serviços</p>
-
-        {/* CARDS */}
-
-        <div className='servicos'>
-
-          {/* primeiro card serviços */}
-
-          <div className='servico-cards'>
-            <div className='servico-cards-imagem'>
-              <img src="/img/aparar.jpg" className='servico-cards-imagem__aparar'></img>
-            </div>
-            <p className="titulo-card">Corte tradicional</p>
-            <p className="valor-card"> R$35,00</p>
-            <div className="botao">
-              <button className="botao-card">Agende agora!</button>
-            </div>
-          </div>
-
-          {/* segundo card serviços */}
-
-          <div className='servico-cards'>
-            <div className='servico-cards-imagem'>
-              <img src="/img/barba.jpg" className='servico-cards-imagem__aparar'></img>
-            </div>
-            <p className="titulo-card">Barba</p>
-            <p className="valor-card"> R$20,00</p>
-            <div className="botao">
-              <button className="botao-card">Agende agora!</button>
-            </div>
-          </div>
-
-          {/* terceiro card serviços */}
-
-          <div className='servico-cards'>
-            <div className='servico-cards-imagem'>
-              <img src="/img/corte+barba.jpg" className='servico-cards-imagem__aparar'></img>
-            </div>
-            <p className="titulo-card">Corte + barba</p>
-            <p className="valor-card"> R$50,00</p>
-            <div className="botao">
-              <button className="botao-card">Agende agora!</button>
             </div>
           </div>
         </div>
-
       </div>
-      <div className='rodape'></div>
+      <div className='rodape'>
+        <div className='rodape-icones'>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div className='rodape-copyright'>
+          <p>© 2023 por A Barbearia da Vila. Orgulhosamente criado com LP Software</p>
+        </div>
+      </div>
     </div>
-  
+
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import MyCalendar from './MyCalendar';
 import HourCheckbox from './HourCheckbox';
 
@@ -7,7 +8,6 @@ import HourCheckbox from './HourCheckbox';
 function SwitchComponent({ selectedOption, handleOptionSelect }) {
   return (
     <div className='agenda-swtich'>
-      {/* ... Conteúdo do SwitchComponent ... */}
       <p className='agenda-servico-titulo'>Selecione o Serviço</p>
       <div className='corte'>
         <div className='agenda-servico-aparar'>
@@ -17,9 +17,9 @@ function SwitchComponent({ selectedOption, handleOptionSelect }) {
           <input
             type="radio"
             name="switchOption"
-            value="option1"
-            checked={selectedOption === 'option1'}
-            onChange={() => handleOptionSelect('option1')}
+            value="corte"
+            checked={selectedOption === 'corte'}
+            onChange={() => handleOptionSelect('corte')}
           />
           Corte
         </label>
@@ -32,9 +32,9 @@ function SwitchComponent({ selectedOption, handleOptionSelect }) {
           <input
             type="radio"
             name="switchOption"
-            value="option2"
-            checked={selectedOption === 'option2'}
-            onChange={() => handleOptionSelect('option2')}
+            value="barba"
+            checked={selectedOption === 'barba'}
+            onChange={() => handleOptionSelect('barba')}
           />
           Barba
         </label>
@@ -47,9 +47,9 @@ function SwitchComponent({ selectedOption, handleOptionSelect }) {
           <input
             type="radio"
             name="switchOption"
-            value="option3"
-            checked={selectedOption === 'option3'}
-            onChange={() => handleOptionSelect('option3')}
+            value="corte + barba"
+            checked={selectedOption === 'corte + barba'}
+            onChange={() => handleOptionSelect('corte + barba')}
           />
           Corte + barba
         </label>
@@ -90,21 +90,12 @@ function Agenda() {
         <div className="nav">
           <div className="nav-fake"></div>
           <div className="navegacao-link">
-            <Link to="/" className="link-lista">
-              Página Inicial
-            </Link>
-            <Link to="/" className="link-lista">
-              Serviços
-            </Link>
-            <Link to="/agenda" className="link-lista">
-              Agenda
-            </Link>
-            <Link to="/" className="link-lista">
-              Quem Somos
-            </Link>
+            <NavLink to="/" className="link-lista" activeClassName="link-ativo">Página Inicial</NavLink>
+            <NavLink to="/servicos" className="link-lista" activeClassName="link-ativo">Serviços</NavLink>
+            <NavLink to="/agenda" className="link-lista" activeClassName="link-ativo">Agenda</NavLink>
+            <NavLink to="/quem-somos" className="link-lista" activeClassName="link-ativo">Quem Somos</NavLink>
           </div>
           <div className="login">
-            <a class="navbar-brand" href="#" className="login-link">Login</a>
             <i className="fa-solid fa-right-to-bracket"></i>
           </div>
         </div>

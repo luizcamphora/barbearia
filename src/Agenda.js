@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import MyCalendar from './MyCalendar';
 import HourCheckbox from './HourCheckbox';
@@ -9,49 +8,34 @@ function SwitchComponent({ selectedOption, handleOptionSelect }) {
   return (
     <div className='agenda-swtich'>
       <p className='agenda-servico-titulo'>Selecione o Serviço</p>
-      <div className='corte'>
-        <div className='agenda-servico-aparar'>
-          <img src='/img/womanglasses18_116013.ico' className='agenda-servico-img' alt="Ícone" />
+      <div className='agenda-servico-corte'>
+        <p className='agenda-servico-corte_txt'>Corte tradicional</p>
+        <div className='agenda-servico-corte_preco-tempo'>
+          <p className='agenda-servico-corte_preco'>R$ 35</p>
+          <p className='agenda-servico-corte_tempo'>1h</p>
         </div>
         <label className='label-servico'>
-          <input
-            type="radio"
-            name="switchOption"
-            value="corte"
-            checked={selectedOption === 'corte'}
-            onChange={() => handleOptionSelect('corte')}
-          />
-          Corte
+          <input type="radio" name="switchOption" value="corte" checked={selectedOption === 'corte'} onChange={() => handleOptionSelect('corte')} />
         </label>
       </div>
-      <div className='barba'>
-        <div className='agenda-servico-aparar'>
-          <img src='/img/womanglasses22_116009.ico' className='agenda-servico-img' alt="Ícone" />
+      <div className='agenda-servico-barba'>
+        <p className='agenda-servico-barba_txt'>Barba completa</p>
+        <div className='agenda-servico-barba_preco-tempo'>
+          <p className='agenda-servico-barba_preco'>R$ 30</p>
+          <p className='agenda-servico-barba_tempo'>1h</p>
         </div>
         <label className='label-servico'>
-          <input
-            type="radio"
-            name="switchOption"
-            value="barba"
-            checked={selectedOption === 'barba'}
-            onChange={() => handleOptionSelect('barba')}
-          />
-          Barba
+          <input type="radio" name="switchOption" value="barba" checked={selectedOption === 'barba'} onChange={() => handleOptionSelect('barba')} />
         </label>
       </div>
-      <div className='corte-barba'>
-        <div className='agenda-servico-aparar'>
-           <img src='/img/womanglasses21_116010.ico' className='agenda-servico-img' alt="Ícone" />
+      <div className='agenda-servico-corte-barba'>
+        <p className='agenda-servico-corte-barba_txt'>Corte + Barba</p>
+        <div className='agenda-servico-corte-barba_preco-tempo'>
+          <p className='agenda-servico-corte-barba_preco'>R$ 50</p>
+          <p className='agenda-servico-corte-barba_tempo'>1h e 30 min</p>
         </div>
         <label className='label-servico'>
-          <input
-            type="radio"
-            name="switchOption"
-            value="corte + barba"
-            checked={selectedOption === 'corte + barba'}
-            onChange={() => handleOptionSelect('corte + barba')}
-          />
-          Corte + barba
+          <input type="radio" name="switchOption" value="corte + barba" checked={selectedOption === 'corte + barba'} onChange={() => handleOptionSelect('corte + barba')} />
         </label>
       </div>
     </div>
@@ -63,15 +47,6 @@ function Agenda() {
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null); // Estado para rastrear a data selecionada
 
-  const handleHourToggle = (hour) => {
-    if (selectedHours.includes(hour)) {
-      setSelectedHours([]);
-    } else {
-      setSelectedHours([hour]);
-    }
-  };
-
-  const hours = Array.from({ length: 9 }, (_, i) => i + 10);
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
@@ -114,15 +89,22 @@ function Agenda() {
           </div>
           <div className="agenda-horario">
             <p className='agenda-servico-titulo'>Selecione o horário</p>
-            {hours.map((hour) => (
-              <HourCheckbox
-                key={hour}
-                hour={hour}
-                selected={selectedHours.includes(hour)}
-                onHourToggle={handleHourToggle}
-              />
-            ))}
-            <div></div>
+              <div className='agenda-horario_colunas'>
+                <div  className='agenda-horario_primeira-coluna'>
+                  <div className='primeiro-horario'>08:00</div>
+                  <div className='segundo-horario'>09:00</div>
+                  <div className='terceiro-horario'>10:00</div>
+                  <div className='quarto-horario'>11:00</div>
+                  <div className='quinto-horario'>12:00</div>
+                </div>
+                <div  className='agenda-horario_segunda-coluna'>
+                  <div className='sexto-horario'>13:00</div>
+                  <div className='setimo-horario'>14:00</div>
+                  <div className='oitavo-horario'>15:00</div>
+                  <div className='nono-horario'>16:00</div>
+                  <div className='decimo-horario'>17:00</div>
+                </div>
+              </div>
           </div>
           <div className="agenda-detalhes">
             <p className='agenda-servico-titulo'>Detalhes do atendimento</p>

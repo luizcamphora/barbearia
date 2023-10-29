@@ -59,8 +59,7 @@
 }
 
 .link-lista.active {
-  color: #EFB43A; /* Cor para o link ativo */
-  /* Outros estilos desejados para o link ativo */
+  color: #EFB43A; 
 }
 
 .login {
@@ -169,6 +168,10 @@
   justify-content: center;
   margin-top: 24px;
 }
+.banner-botao-container:hover{
+  transition: 0.5s;
+  background-color: #e29f19;
+}
 
 .banner-botao{
   width: 240px;
@@ -187,6 +190,7 @@
   cursor: pointer;
   color: #fff;
   transition: 0.5s;
+  background-color: #e29f19;
 }
 
 .servico-titulo {
@@ -202,13 +206,32 @@
 
 }
 
-.servico-cards {
+.servico-cards_corte {
   width: 300px;
-  height: 420px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: #b4b4b4 1px solid;
+  border: #161515 1px solid;
+  margin-left: 40px;
+}
+
+.servico-cards_barba {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #161515 1px solid;
+}
+.servico-cards_corte-barba {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #161515 1px solid;
+  margin-right: 40px;
 }
 
 .servico-cards-imagem {
@@ -332,7 +355,76 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+.agenda-servico-corte{
+  width: 280px;
+  height: 96px;
+  border-top: #e29f19 1px solid;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.agenda-servico-corte_txt{
+  font-family: 'Queen';
+  font-weight: bolder;
+}
+.agenda-servico-corte_preco{
+  font-family: 'Queen';
+  margin: 0 auto;
+  text-align: center;
+}
+.agenda-servico-corte_tempo{
+  font-family: 'Queen';
+  margin: 0 auto;
+  text-align: center;
+}
 
+.agenda-servico-barba{
+  width: 280px;
+  height: 96px;
+  border-top: #e29f19 1px solid; 
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agenda-servico-barba_txt{
+  font-family: 'Queen';
+  font-weight: bolder;
+}
+.agenda-servico-barba_preco{
+  font-family: 'Queen';
+  margin: 0 auto;
+  text-align: center;
+}
+.agenda-servico-barba_tempo{
+  font-family: 'Queen';
+  margin: 0 auto;
+  text-align: center;
+}
+
+.agenda-servico-corte-barba{
+  width: 280px;
+  height: 96px;
+  border-top: #e29f19 1px solid;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.agenda-servico-corte-barba_txt{
+  font-family: 'Queen';
+  font-weight: bolder;
+}
+.agenda-servico-corte-barba_preco{
+  font-family: 'Queen';
+  margin: 0 auto;
+  text-align: center;
+}
+.agenda-servico-corte-barba_tempo{
+  font-family: 'Queen';
+  margin: 0 auto;
+  text-align: center;
 }
 
 .agenda-data {
@@ -378,11 +470,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
-.label-servico {
-  margin-right: 40px;
-}
 
 .agenda-servico-aparar {
   margin-left: 40px;
@@ -395,6 +485,143 @@
   font-size: 24px;
 }
 
-.calendario-customizacao {
-  background-color: rgba(0, 0, 0, 0.9);
+.quem-somos_img{
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 32px;
 }
+.que-somos_img-arquivo{
+  width: 400px;
+  height: auto;
+  position:absolute;
+  top: -30%;
+  left: -30px;
+}
+.quem-somos_txt{
+  width: 820px;
+  height: 400px;
+  background-color: #242424;
+  margin-right: 32px;
+
+}
+.quem-somos_txt-titulo{
+  font-family: 'Queen';
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  color: #EFB43A;
+}
+.quem-somos_txt-paragrafo{
+  font-family: 'Queen';
+  font-size: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.agenda-horario_colunas{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.agenda-horario_primeira-coluna{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 300px;
+  margin-left: 40px;
+}
+.agenda-horario_segunda-coluna{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 300px;
+  margin-right: 40px;
+}
+.primeiro-horario,.segundo-horario,.terceiro-horario,
+.quarto-horario,.quinto-horario,.sexto-horario,
+.setimo-horario,.oitavo-horario,.nono-horario,
+.decimo-horario{
+  width: 80px;
+  height: 40px;
+  background-color: #EFB43A;
+  color: #242424;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Queen';
+  font-weight: bold;
+}
+.primeiro-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.segundo-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.terceiro-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.quarto-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.quinto-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sexto-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.setimo-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.oitavo-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.nono-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.decimo-horario:hover{
+  background-color: #cf9218;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

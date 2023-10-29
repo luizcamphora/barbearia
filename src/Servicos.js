@@ -47,53 +47,56 @@ function Servicos() {
                         <i class="fa-solid fa-right-to-bracket" ></i>
                     </div>
                 </div>
-
             </nav>
             <div className="principal">
-
 
                 <div className="agenda-imagem">
                     <img src="/img/img-agenda-fundo.jpg" className="agenda-imagem-fundo" alt="Imagem de Fundo da Agenda" />
                 </div>
-
                 <div className="overlay">
 
                     {/* primeiro card serviços */}
 
-                    <div className='servico-cards'>
+                    <div className='servico-cards_corte'>
                         <div className='servico-cards-imagem'>
                             <img src="/img/aparar.jpg" className='servico-cards-imagem__aparar'></img>
                         </div>
                         <p className="titulo-card">Corte tradicional</p>
                         <p className="valor-card"> R$35,00</p>
                         <div className="botao">
-                            <button className="botao-card">Agende agora!</button>
+                            <Link to="/agenda" className="link-lista">
+                                <button className="botao-card">Agende agora!</button>
+                            </Link>
                         </div>
                     </div>
 
                     {/* segundo card serviços */}
 
-                    <div className='servico-cards'>
+                    <div className='servico-cards_barba'>
                         <div className='servico-cards-imagem'>
                             <img src="/img/barba.jpg" className='servico-cards-imagem__aparar'></img>
                         </div>
                         <p className="titulo-card">Barba</p>
-                        <p className="valor-card"> R$20,00</p>
+                        <p className="valor-card"> R$30,00</p>
                         <div className="botao">
-                            <button className="botao-card">Agende agora!</button>
+                            <Link to="/agenda" className="link-lista">
+                                <button className="botao-card">Agende agora!</button>
+                            </Link>
                         </div>
                     </div>
 
                     {/* terceiro card serviços */}
 
-                    <div className='servico-cards'>
+                    <div className='servico-cards_corte-barba'>
                         <div className='servico-cards-imagem'>
                             <img src="/img/corte+barba.jpg" className='servico-cards-imagem__aparar'></img>
                         </div>
                         <p className="titulo-card">Corte + barba</p>
                         <p className="valor-card"> R$50,00</p>
                         <div className="botao">
-                            <button className="botao-card">Agende agora!</button>
+                            <Link to="/agenda" className="link-lista">
+                                <button className="botao-card">Agende agora!</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
